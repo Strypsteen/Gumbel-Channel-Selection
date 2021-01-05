@@ -140,12 +140,6 @@ class SelectionLayer(nn.Module):
 		z = self.sample_z(x.size(0),training=(self.training and not self.freeze))
 		z_t = torch.transpose(z,2,3)
 		out = torch.matmul(z_t,x)
-		# out = torch.zeros(x.size(0),1,self.M,x.size(3)).cuda()
-		# for j in range(self.M):
-		# 		z_m = z[:,:,:,j].view(z.size(0),1,z.size(2),1)
-		# 		z_m = z_m.expand(z.size(0),1,z.size(2),x.size(3))
-		# 		out[:,:,j,:] = torch.sum(z_m*x,dim=2)
-
 		return out
 
 class SelectionNet(nn.Module):
