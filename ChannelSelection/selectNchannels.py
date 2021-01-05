@@ -43,10 +43,10 @@ parser.add_argument('--lamba', type=float, default=0.1,
 
 					help='regularization weight')
 
-parser.add_argument('--start_temp',type=float,default=1.0,
+parser.add_argument('--start_temp',type=float,default=10.0,
 
 					help='initial temperature')
-parser.add_argument('--end_temp',type=float,default=0.01,
+parser.add_argument('--end_temp',type=float,default=0.1,
 
 					help='final temperature')
 
