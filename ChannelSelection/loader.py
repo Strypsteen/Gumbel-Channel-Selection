@@ -14,8 +14,6 @@ def all_subject_loader_HGD(batch_size,train_split,path):
 
 	for k in range(num_subjects):
 		#Load training data
-		#traindatapath = path + str(k+1)+"traindata.npy"
-		#trainlabelpath = path + str(k+1)+"trainlabel.npy"
 		traindatapath = os.path.join(path,str(k+1)+"traindata.npy")
 		trainlabelpath = os.path.join(path,str(k+1)+"trainlabel.npy")
 		train_eeg_data = torch.Tensor(np.load(traindatapath))
